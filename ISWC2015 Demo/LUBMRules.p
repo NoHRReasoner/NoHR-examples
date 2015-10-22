@@ -1,0 +1,7 @@
+'replacementCandidateAt'(X,Y):-'faculty'(X),'<http://swat.cse.lehigh.edu/onto/univ-bench.owl#memberOf>'(X,Y),tnot('<http://swat.cse.lehigh.edu/onto/univ-bench.owl#onLeave>'(X)).
+'courseWithoutTeacher'(X):-'<http://swat.cse.lehigh.edu/onto/univ-bench.owl#Course>'(X),'<http://swat.cse.lehigh.edu/onto/univ-bench.owl#teacherOf>'(Y,X),'<http://swat.cse.lehigh.edu/onto/univ-bench.owl#onLeave>'(Y).
+'teachingAssistantCandidate'(X):-'gradudate student'(X),tnot('<http://swat.cse.lehigh.edu/onto/univ-bench.owl#TeachingAssistant>'(X)).
+'TeachingAssistantCandAtDep1'(X):-'<http://swat.cse.lehigh.edu/onto/univ-bench.owl#GraduateStudent>'(X),tnot('<http://swat.cse.lehigh.edu/onto/univ-bench.owl#TeachingAssistant>'(X)),'<http://swat.cse.lehigh.edu/onto/univ-bench.owl#memberOf>'(X,'<http://www.Department1.University0.edu>').
+'researchAssistantCandidate'(X):-'<http://swat.cse.lehigh.edu/onto/univ-bench.owl#GraduateStudent>'(X),tnot('<http://swat.cse.lehigh.edu/onto/univ-bench.owl#ResearchAssistant>'(X)).
+'undergradSupervisedByFullOrAssoc'(X,Y):-'<http://swat.cse.lehigh.edu/onto/univ-bench.owl#UndergraduateStudent>'(X),'<http://swat.cse.lehigh.edu/onto/univ-bench.owl#advisor>'(X,Y),tnot('<http://swat.cse.lehigh.edu/onto/univ-bench.owl#AssistantProfessor>'(Y)).
+'<http://swat.cse.lehigh.edu/onto/univ-bench.owl#subOrganizationOf>'(X,Z):-'<http://swat.cse.lehigh.edu/onto/univ-bench.owl#subOrganizationOf>'(X,Y),'<http://swat.cse.lehigh.edu/onto/univ-bench.owl#subOrganizationOf>'(Y,Z).
